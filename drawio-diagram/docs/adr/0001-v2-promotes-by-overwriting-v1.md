@@ -1,0 +1,3 @@
+# v2 promotes by overwriting v1 (not a sibling skill)
+
+AWS support is added by drafting the new skill content inside `v2/` and later copying its contents up one level to overwrite the existing v1 `SKILL.md`. The alternative — creating a sibling skill at `~/.claude/skills/drawio-aws-diagram/` — was rejected because Claude's skill discovery only enumerates top-level directories under `~/.claude/skills/`, two sibling skills would duplicate the file-wrapper / colour-system / layout / edge-routing rules, and the user explicitly framed this work as "an extension of the current skill", not a parallel one. The `v2/` folder is a staging area; once promoted it ceases to exist, while `v2/plan/` and `v2/docs/` are preserved at the skill root as historical record.

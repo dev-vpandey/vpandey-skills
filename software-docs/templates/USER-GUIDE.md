@@ -18,8 +18,8 @@ One sentence. What problem does this solve for the user?
 
 What must be true before the user can start?
 
-- [ ] [Requirement 1 — e.g., access to X system]
-- [ ] [Requirement 2 — e.g., installed Y]
+- [Requirement 1 — e.g., access to X system]
+- [Requirement 2 — e.g., installed Y]
 
 Need access? Contact: [team / link]
 

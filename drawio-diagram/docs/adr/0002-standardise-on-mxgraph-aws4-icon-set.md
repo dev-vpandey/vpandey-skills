@@ -1,0 +1,3 @@
+# Standardise on the `mxgraph.aws4` icon set
+
+All AWS service nodes and group containers use the `mxgraph.aws4` icon library exclusively. draw.io ships several alternative sets — the legacy `mxgraph.aws3` (flat 2015-era icons) and a series of yearly snapshots `mxgraph.aws17` through `mxgraph.aws23`. `aws4` was chosen because it has the widest service coverage (≈150+ services), the most stable style-string format, and matches what nearly every draw.io AWS template found online uses. Supporting multiple sets would force every row in the 30-service cheat-sheet to be duplicated and risk visual inconsistency within a single diagram. If AWS publishes a future iconography refresh that draw.io ships as `aws25` or later, that would warrant a new ADR superseding this one.
