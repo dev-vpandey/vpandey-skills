@@ -26,6 +26,18 @@ The style attribute selecting the AWS group-container variant. Example: `grIcon=
 The empty horizontal band (≈20–30px) between adjacent swimlanes or group containers, used as the routing channel for cross-layer edges. Edges that need to traverse the corridor declare explicit `Array as="points"` waypoints inside it.
 _Avoid_: gutter, gap, margin.
 
+**MCP path**:
+Tier 1 or Tier 2 delivery — diagram opened in the live draw.io editor via MCP tools (`open_drawio_mermaid` or `open_drawio_xml`), no file written to disk.
+_Avoid_: online path, browser path.
+
+**File path**:
+Tier 3 delivery — `.drawio` file written to disk, opened manually by dragging onto app.diagrams.net or via VS Code. REFERENCE.md layout rules apply in full.
+_Avoid_: offline path, local path.
+
+**`-no-mcp` flag**:
+Exact token placed at the start or end of a user prompt to force Tier 3 (file write) even when MCP is configured.
+_Avoid_: no-mcp option, MCP disable flag.
+
 **Promote**:
 The one-time act of copying `v2/SKILL.md`, `v2/REFERENCE.md`, `v2/AWS-REFERENCE.md`, `v2/EXAMPLES.md` up one directory level (overwriting the v1 SKILL.md), moving `v2/plan/` and `v2/docs/` up alongside them, then deleting the `v2/` folder. Performed only by the user, after plan approval.
 

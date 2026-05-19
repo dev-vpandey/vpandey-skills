@@ -71,15 +71,14 @@ Shapes and category colours → **AWS-REFERENCE.md**
 
 1. Answer: what is the argument? what structure mirrors it?
 2. For AWS diagrams: identify which nodes are AWS services; consult AWS-REFERENCE.md for shape name and colour
-3. Write the complete `.drawio` XML — file wrapper, all cells, all edges
-4. Save as `[topic-slug].drawio`
-5. Tell Vicky: "`[filename].drawio` ready — drag onto **app.diagrams.net** or open in VS Code (Draw.io Integration extension)"
-6. One line on what the diagram argues
+3. Follow ROUTING.md — determines delivery (MCP live editor or file write) and XML rules
+4. One line on what the diagram argues
 
 Do not print raw XML in the conversation unless asked — write the file directly.
 
 ## REFERENCES
 
+- Routing decision (MCP vs file, tier selection, XML rules per path) → **ROUTING.md**
 - Generic shapes, colour system, layout rules → **REFERENCE.md**
 - AWS service icons and cheat sheet → **AWS-REFERENCE.md**
 - Worked examples → **EXAMPLES.md**
