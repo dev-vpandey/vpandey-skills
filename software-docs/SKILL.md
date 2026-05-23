@@ -1,6 +1,6 @@
 ---
 name: software-docs
-description: Expert skill for writing high-quality software documentation including PRDs, Design Docs, RFCs, ADRs, User Guides, Runbooks, Changelogs, Release Notes, and Postmortems. Use when user asks to write, create, or draft any technical or product document. Triggers: "write a PRD", "create design doc", "draft RFC", "write ADR", "create runbook", "write release notes", "create changelog", "write postmortem", "write user guide", "document this feature", "create incident report".
+description: Expert skill for writing high-quality software documentation including PRDs, Design Docs, RFCs, ADRs, User Guides, Runbooks, Changelogs, Release Notes, and Postmortems. Use when user asks to write, create, or draft any technical or product document. Triggers: "write a PRD", "create design doc", "draft RFC", "write ADR", "create runbook", "write release notes", "create changelog", "write postmortem", "write user guide", "document this feature", "create incident report". Add --human / --humanise / --humanize anywhere in the prompt to auto-humanize the final doc after writing.
 ---
 
 # Software Docs Skill
@@ -15,6 +15,17 @@ description: Expert skill for writing high-quality software documentation includ
 
 ---
 
+## Humanization Flag
+
+Check the user's prompt for `--human`, `--humanise`, or `--humanize` (case-insensitive, any position).
+
+- **If flag present:** strip the flag from the prompt before processing. After the doc is written to file (Step 6), output exactly `Humanizing...` on its own line, then use the `Skill` tool to invoke `humanizer` with the written file path as context. The humanizer rewrites the file in place at `full` intensity. The humanized version replaces the draft — do not show the pre-humanized output.
+- **If flag absent:** proceed normally, no humanization step.
+
+**Examples:** `write a PRD for X --humanise` · `--human write a user guide` · `create release notes --humanize`
+
+---
+
 ## Workflow
 
 ```
@@ -24,6 +35,7 @@ description: Expert skill for writing high-quality software documentation includ
 4. Ask open questions BEFORE finalising
 5. Resolve open questions with user
 6. Iterate with user until approved
+7. If --human/--humanise/--humanize flag present → humanize written file in place
 ```
 
 ### Step 1 — Identify doc type
