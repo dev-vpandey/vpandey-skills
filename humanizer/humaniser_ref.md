@@ -262,13 +262,28 @@ Avoiding AI patterns is only half the job. Sterile, voiceless writing is just as
 
 ### 14. Em Dash Overuse
 
-**Problem:** LLMs use em dashes (—) more than humans, mimicking "punchy" sales writing. In practice, most of these can be rewritten more cleanly with commas, periods, or parentheses.
+**Problem:** LLMs use em dashes (—) more than humans, mimicking "punchy" sales writing. Most can be rewritten with commas, periods, or parentheses. Also catch `—` used as an empty-value placeholder in tables (replace with "N/A") and `(TBD — ...)` patterns (replace with `(TBD, ...)`).
 
 **Before:**
 > The term is primarily promoted by Dutch institutions—not by the people themselves. You don't say "Netherlands, Europe" as an address—yet this mislabeling continues—even in official documents.
+> Primary region — all active components. | (TBD — SME input required)
 
 **After:**
 > The term is primarily promoted by Dutch institutions, not by the people themselves. You don't say "Netherlands, Europe" as an address, yet this mislabeling continues in official documents.
+> Primary region. Hosts all active components. | (TBD, needs SME input)
+
+
+### 14a. Unicode Arrow Overuse (→)
+
+**Problem:** LLMs use `→` (and ASCII `->`) as shorthand for "to", "becomes", or "changes from X to Y". Replace with plain words in all contexts — prose, headings, table cells, and list items.
+
+**Before:**
+> S3 lifecycle policy change (3yr → 1yr)
+> Routing traffic from us-west-2 → us-east-1
+
+**After:**
+> S3 lifecycle policy change (3yr to 1yr)
+> Routing traffic from us-west-2 to us-east-1
 
 
 ### 15. Overuse of Boldface
